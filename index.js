@@ -28,7 +28,7 @@ app.get("/store", (request, response) => {
   let body = request.query;
   const value = body.value;
   console.log("storing");
-  //entries.push(sanitizer.escape(value));
+  entries.push(sanitizer.escape(value));
   entries.push(value);
   response.redirect("/");
 });
