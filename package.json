@@ -1,0 +1,14 @@
+{
+  "name": "Thinkit-devsecops",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": "https://github.com/akremkhezami/Thinkit-devsecops.git",
+  "author": "akremkhezami <akremkhezami@think-it.io>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
