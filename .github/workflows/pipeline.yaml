@@ -10,4 +10,14 @@ jobs:
           node-version: '14'
       - run: yarn
       - run: yarn test
-      
+  Deploy:
+      needs: Build-And-Test
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: akhileshns/heroku-deploy@v3.12.12
+          with:
+            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+            heroku_app_name: think-it-workshop
+            heroku_email: akremkhezami@think-it.io
+
