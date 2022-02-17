@@ -10,8 +10,19 @@ jobs:
           node-version: '14'
       - run: yarn
       - run: yarn test
+  Static-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: yarn
+      - run: yarn audit
   Deploy:
-      needs: Build-And-Test
+      needs: 
+        - Build-And-Test
+        - Static-analysis
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
@@ -20,4 +31,5 @@ jobs:
             heroku_api_key: ${{secrets.HEROKU_API_KEY}}
             heroku_app_name: think-it-workshop
             heroku_email: akremkhezami@think-it.io
+
 

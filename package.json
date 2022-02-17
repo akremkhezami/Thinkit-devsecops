@@ -10,7 +10,8 @@
   "author": "akremkhezami <akremkhezami@think-it.io>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.3",
+    "audit": "^0.0.6",
+    "express": "4.0.0",
     "jest": "^27.5.1",
     "supertest": "^6.2.2"
   }
