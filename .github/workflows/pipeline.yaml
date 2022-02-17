@@ -31,7 +31,7 @@ jobs:
             heroku_api_key: ${{secrets.HEROKU_API_KEY}}
             heroku_app_name: think-it-workshop
             heroku_email: akremkhezami@think-it.io
-    zap_scan:
+  zap_scan:
       needs: Deploy
       runs-on: ubuntu-latest
       name: Scan the webapplication
