@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": "https://github.com/akremkhezami/Thinkit-devsecops.git",
   "author": "akremkhezami <akremkhezami@think-it.io>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
   }
 }
